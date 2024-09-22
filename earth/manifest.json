@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "3D Earth Weather",
+  "version": "1.0",
+  "description": "显示3D地球背景,并提供城市时间和天气信息",
+  "action": {
+    "default_title": "3D Earth Weather"
+  },
+  "permissions": [
+    "geolocation"
+  ],
+  "host_permissions": [
+    "https://my.spline.design/*",
+    "https://api.openweathermap.org/*",
+    "http://api.timezonedb.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
